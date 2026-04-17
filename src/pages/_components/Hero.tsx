@@ -5,93 +5,70 @@ import HERO_BG from "@/assets/hero/hero.jpeg";
 
 export default function Hero() {
   return (
-    <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
-      <div className="absolute inset-0 bg-[#001a40]" />
-      <div className="absolute inset-0">
+    <section id="home" className="relative min-h-screen w-full flex flex-col justify-center overflow-hidden bg-background py-20 lg:py-32">
+      {/* Background Image & Cinematic Overlay */}
+      <div className="absolute inset-0 z-0">
         <img
           src={HERO_BG}
-          alt="Neurology background"
-          className="w-full h-full object-cover opacity-60"
+          alt="Dr. Gaurav Tyagi Neurosurgical Expertise"
+          className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#001a40]/90 via-[#002a6e]/75 to-[#0ea5e9]/20" />
+        {/* Professional Gradient Layering */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#001a40] via-[#001a40]/80 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#001a40]/60 via-transparent to-transparent" />
       </div>
 
-      {/* Floating orbs */}
-      <motion.div
-        animate={{
-          x: [0, 40, 0],
-          y: [0, 20, 0],
-        }}
-        transition={{
-          duration: 15,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-        className="absolute top-1/4 right-1/4 w-96 h-96 rounded-full bg-sky-500/10 blur-[120px] pointer-events-none"
-      />
-      <motion.div
-        animate={{
-          x: [0, -30, 0],
-          y: [0, 40, 0],
-        }}
-        transition={{
-          duration: 18,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-        className="absolute bottom-1/3 right-1/3 w-64 h-64 rounded-full bg-blue-400/10 blur-[100px] pointer-events-none"
-      />
+      {/* Decorative Light Elements */}
+      <div className="absolute -top-[10%] -left-[10%] w-[40%] h-[40%] rounded-full bg-sky-500/10 blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/2 right-[5%] w-[30%] h-[30%] rounded-full bg-blue-400/5 blur-[100px] pointer-events-none" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pt-32 pb-20">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-8">
         <div className="max-w-3xl">
           {/* Badge */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
-            whileHover={{ y: -2, backgroundColor: "rgba(255, 255, 255, 0.15)" }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-1.5 mb-8 cursor-default"
+            className="inline-flex items-center gap-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full px-4 py-1.5 mb-8"
           >
-            <span className="w-2 h-2 rounded-full bg-sky-400 animate-pulse" />
-            <span className="text-white/90 text-sm font-medium">Indraprastha Apollo Hospital, New Delhi</span>
+            <span className="w-1.5 h-1.5 rounded-full bg-sky-400" />
+            <span className="text-white/80 text-[11px] font-semibold tracking-wider uppercase">
+              Indraprastha Apollo Hospital, New Delhi
+            </span>
           </motion.div>
 
           {/* Headline */}
           <motion.h1
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-5xl md:text-6xl lg:text-7xl font-serif font-normal text-white leading-[1.1] mb-6 text-balance"
+            className="text-4xl md:text-5xl lg:text-6xl font-serif text-white leading-[1.15] mb-6 text-balance"
           >
-            When It&apos;s Your Brain,{" "}
-            <span className="text-sky-300">Expertise</span>{" "}
-            Matters Most.
+            When It&apos;s Your Brain, <br />
+            <span className="text-sky-400">Expertise</span> Matters Most.
           </motion.h1>
 
           {/* Subtext */}
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.35 }}
-            className="text-lg text-white max-w-2xl mb-10 leading-relaxed"
+            className="text-base md:text-lg text-white/75 max-w-2xl mb-10 leading-relaxed"
           >
-            Advanced minimally invasive care for brain tumors, stroke, and complex neurovascular
-            conditions—powered by global expertise and cutting-edge technologies like{" "}
-            <span className="text-sky-300 font-medium">Zap-X radiosurgery</span> for precise,
-            non-invasive treatment.
+            Advanced minimally invasive care for brain tumors, stroke, and complex 
+            neurovascular conditions—powered by global expertise and cutting-edge 
+            technologies like <span className="text-sky-300 font-medium">Zap-X radiosurgery</span>.
           </motion.p>
 
           {/* CTAs */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
             className="flex flex-wrap gap-4"
           >
             <Button
               size="lg"
-              className="rounded-full px-8 py-6 text-base font-semibold bg-sky-500 hover:bg-sky-400 text-white shadow-xl shadow-sky-900/40 cursor-pointer gap-2 transition-all hover:scale-[1.05] active:scale-95"
+              className="rounded-full px-8 py-6 text-base font-semibold bg-sky-500 hover:bg-sky-400 text-white shadow-lg shadow-sky-900/20 cursor-pointer gap-2 transition-all"
               asChild
             >
               <a href="#contact">
@@ -102,16 +79,13 @@ export default function Hero() {
             <Button
               size="lg"
               variant="ghost"
-              className="rounded-full px-8 py-6 text-base font-semibold text-white border border-white/30 hover:bg-white/10 backdrop-blur-sm cursor-pointer gap-2 transition-all hover:scale-[1.05] active:scale-95"
+              className="rounded-full px-8 py-6 text-base font-semibold text-white border border-white/20 hover:bg-white/5 backdrop-blur-sm cursor-pointer gap-2 transition-all"
               asChild
             >
               <a href="#videos">
-                <motion.div 
-                  whileHover={{ scale: 1.1 }}
-                  className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center"
-                >
+                <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center">
                   <Play className="w-4 h-4 fill-white text-white ml-0.5" />
-                </motion.div>
+                </div>
                 Watch Patient Stories
               </a>
             </Button>
@@ -122,36 +96,36 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.7 }}
-            className="mt-16 flex flex-wrap items-center gap-8"
+            className="mt-12 lg:mt-16 flex flex-wrap items-center gap-6 lg:gap-8 pb-32"
           >
-            {["NIMHANS Trained", "Apollo Hospital", "International Fellowship"].map((item) => (
-              <motion.div 
-                key={item} 
-                whileHover={{ y: -2, opacity: 1 }}
-                className="flex items-center gap-2 cursor-default transition-opacity opacity-80 hover:opacity-100"
-              >
-                <div className="w-1.5 h-1.5 rounded-full bg-sky-400 shadow-[0_0_10px_rgba(56,189,248,0.5)]" />
-                <span className="text-white text-sm font-medium tracking-wide">{item}</span>
-              </motion.div>
+            {[
+              "NIMHANS Trained", 
+              "Apollo Hospital", 
+              "International Fellowship"
+            ].map((item) => (
+              <div key={item} className="flex items-center gap-2">
+                <div className="w-1.5 h-1.5 bg-sky-400 rounded-sm" />
+                <span className="text-white/80 text-sm font-medium tracking-wide whitespace-nowrap">{item}</span>
+              </div>
             ))}
           </motion.div>
         </div>
       </div>
 
-      {/* Scroll indicator */}
+      {/* Scroll indicator - Bottom Anchored */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1.2 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 cursor-pointer"
+        transition={{ delay: 1, duration: 1 }}
+        className="absolute bottom-6 left-0 right-0 z-20 flex flex-col items-center gap-1 cursor-pointer"
         onClick={() => window.scrollTo({ top: window.innerHeight, behavior: "smooth" })}
       >
-        <span className="text-white/60 text-xs tracking-widest uppercase">Scroll</span>
+        <span className="text-white/30 text-[9px] tracking-widest uppercase font-bold">Scroll</span>
         <motion.div
-          animate={{ y: [0, 6, 0] }}
-          transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
+          animate={{ y: [0, 5, 0] }}
+          transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
         >
-          <ChevronDown className="w-5 h-5 text-white/60" />
+          <ChevronDown className="w-5 h-5 text-white/30" />
         </motion.div>
       </motion.div>
     </section>
