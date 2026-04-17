@@ -30,7 +30,7 @@ const posts = [
 
 export default function Blog() {
   return (
-    <section id="blog" className="py-24 bg-white">
+    <section id="blog" className="py-24 bg-background">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -75,7 +75,7 @@ export default function Blog() {
               {/* Content */}
               <div className="p-6">
                 <div className="flex items-center justify-between mb-3">
-                  <span className="text-xs font-semibold text-sky-600 bg-sky-50 px-3 py-1 rounded-full">
+                  <span className="text-xs font-semibold text-sky-600 bg-sky-500/10 px-3 py-1 rounded-full">
                     {post.category}
                   </span>
                   <div className="flex items-center gap-1 text-xs text-muted-foreground">

@@ -77,7 +77,7 @@ export default function Testimonials() {
               <img src={v.thumb} alt={v.name} className="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-500" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-14 h-14 rounded-full bg-white/90 flex items-center justify-center shadow-xl">
+                <div className="w-14 h-14 rounded-full bg-background/90 flex items-center justify-center shadow-xl">
                   <svg className="w-6 h-6 text-sky-600 fill-sky-600 ml-1" viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21" /></svg>
                 </div>
               </div>
@@ -98,7 +98,7 @@ export default function Testimonials() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="bg-white rounded-2xl p-6 border border-border shadow-sm hover:shadow-md transition-shadow"
+              className="bg-background rounded-2xl p-6 border border-border shadow-sm hover:shadow-md transition-shadow"
             >
               <div className="flex items-start justify-between mb-4">
                 <div className="flex gap-0.5">

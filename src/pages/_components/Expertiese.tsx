@@ -79,7 +79,7 @@ export default function Expertise() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="group bg-white rounded-2xl p-6 border border-border shadow-sm hover:shadow-xl hover:shadow-sky-900/8 transition-all duration-300 hover:-translate-y-1 cursor-default"
+              className="group bg-background rounded-2xl p-6 border border-border shadow-sm hover:shadow-xl hover:shadow-sky-900/8 transition-all duration-300 hover:-translate-y-1 cursor-default"
             >
               <div
                 className={`w-12 h-12 rounded-xl border flex items-center justify-center mb-5 transition-all duration-300 ${colorMap[item.color]}`}

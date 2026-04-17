@@ -21,7 +21,7 @@ const badges = [
 
 export default function DoctorProfile() {
   return (
-    <section id="about" className="py-24 bg-white">
+    <section id="about" className="py-24 bg-background">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section header */}
         <motion.div
@@ -56,7 +56,7 @@ export default function DoctorProfile() {
               {/* Overlay gradient */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
               {/* Name card */}
-              <div className="absolute bottom-6 left-6 right-6 bg-white/90 backdrop-blur-sm rounded-xl p-4 shadow-lg">
+              <div className="absolute bottom-6 left-6 right-6 bg-background/90 backdrop-blur-sm rounded-xl p-4 shadow-lg">
                 <p className="text-lg font-bold text-foreground">Dr. Gaurav Tyagi</p>
                 <p className="text-sky-600 text-sm font-medium">Senior Consultant Neurosurgeon</p>
                 <p className="text-muted-foreground text-xs mt-0.5">
@@ -70,7 +70,7 @@ export default function DoctorProfile() {
               {badges.map((b) => (
                 <div
                   key={b.label}
-                  className="bg-white rounded-xl p-3 shadow-lg border border-border text-center w-20"
+                  className="bg-background rounded-xl p-3 shadow-lg border border-border text-center w-20"
                 >
                   <p className="text-xs font-bold text-sky-700 leading-tight whitespace-pre-line">{b.label}</p>
                   <p className="text-[10px] text-muted-foreground mt-0.5">{b.sub}</p>

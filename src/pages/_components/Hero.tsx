@@ -7,12 +7,12 @@ const HERO_BG = "src/assets/hero/hero.jpeg";
 export default function Hero() {
   return (
     <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Background */}
+      <div className="absolute inset-0 bg-[#001a40]" />
       <div className="absolute inset-0">
         <img
           src={HERO_BG}
           alt="Neurology background"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover opacity-60"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-[#001a40]/90 via-[#002a6e]/75 to-[#0ea5e9]/20" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#001a40]/60 via-transparent to-transparent" />

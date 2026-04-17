@@ -33,7 +33,7 @@ const thumbnails = [
 
 export default function VideoSection() {
   return (
-    <section id="videos" className="py-24 bg-white">
+    <section id="videos" className="py-24 bg-background">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -64,7 +64,7 @@ export default function VideoSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="group block rounded-2xl overflow-hidden border border-border shadow-sm hover:shadow-xl hover:shadow-sky-900/8 transition-all duration-300 hover:-translate-y-1 cursor-pointer bg-white"
+              className="group block rounded-2xl overflow-hidden border border-border shadow-sm hover:shadow-xl hover:shadow-sky-900/8 transition-all duration-300 hover:-translate-y-1 cursor-pointer bg-background"
             >
               {/* Thumbnail */}
               <div className="relative overflow-hidden">
@@ -75,7 +75,7 @@ export default function VideoSection() {
                 />
                 <div className="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors duration-300" />
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-14 h-14 rounded-full bg-white/90 group-hover:bg-white flex items-center justify-center shadow-xl transition-all duration-300 group-hover:scale-110">
+                  <div className="w-14 h-14 rounded-full bg-background/90 group-hover:bg-background flex items-center justify-center shadow-xl transition-all duration-300 group-hover:scale-110">
                     <Play className="w-6 h-6 text-sky-600 fill-sky-600 ml-1" />
                   </div>
                 </div>
