@@ -1,8 +1,9 @@
 import { motion } from "motion/react";
 import { CheckCircle2 } from "lucide-react";
+import doctorImg from "@/assets/about/dr_gaurav.jpeg";
 
 const DOCTOR_IMG =
-  "https://images.unsplash.com/photo-1645066928295-2506defde470?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NzIwMTN8MHwxfHNlYXJjaHwyfHxuZXVyb3N1cmdlb24lMjBkb2N0b3IlMjBwcm9mZXNzaW9uYWwlMjBwb3J0cmFpdCUyMHdoaXRlJTIwY29hdHxlbnwwfHx8fDE3NzYzMzkxMjZ8MA&ixlib=rb-4.1.0&q=80&w=1080";
+  doctorImg;
 
 const credentials = [
   "MBBS & MS – NIMHANS, Bengaluru",
@@ -38,7 +39,7 @@ export default function DoctorProfile() {
           </h2>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-[40%_60%] gap-16 items-center">
           {/* Left: Image */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
@@ -51,7 +52,7 @@ export default function DoctorProfile() {
               <img
                 src={DOCTOR_IMG}
                 alt="Dr. Gaurav Tyagi"
-                className="w-full h-[560px] object-cover object-top"
+                className="w-full h-[560px] object-cover"
               />
               {/* Overlay gradient */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />

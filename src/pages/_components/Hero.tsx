@@ -18,8 +18,30 @@ export default function Hero() {
       </div>
 
       {/* Floating orbs */}
-      <div className="absolute top-1/4 right-1/4 w-96 h-96 rounded-full bg-sky-500/10 blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-1/3 right-1/3 w-64 h-64 rounded-full bg-blue-400/10 blur-[100px] pointer-events-none" />
+      <motion.div
+        animate={{
+          x: [0, 40, 0],
+          y: [0, 20, 0],
+        }}
+        transition={{
+          duration: 15,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+        className="absolute top-1/4 right-1/4 w-96 h-96 rounded-full bg-sky-500/10 blur-[120px] pointer-events-none"
+      />
+      <motion.div
+        animate={{
+          x: [0, -30, 0],
+          y: [0, 40, 0],
+        }}
+        transition={{
+          duration: 18,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+        className="absolute bottom-1/3 right-1/3 w-64 h-64 rounded-full bg-blue-400/10 blur-[100px] pointer-events-none"
+      />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pt-32 pb-20">
         <div className="max-w-3xl">
@@ -27,11 +49,12 @@ export default function Hero() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
+            whileHover={{ y: -2, backgroundColor: "rgba(255, 255, 255, 0.15)" }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-1.5 mb-6"
+            className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-1.5 mb-8 cursor-default"
           >
             <span className="w-2 h-2 rounded-full bg-sky-400 animate-pulse" />
-            <span className="text-white/90 text-sm font-medium">Apollo Hospital, New Delhi</span>
+            <span className="text-white/90 text-sm font-medium">Indraprastha Apollo Hospital, New Delhi</span>
           </motion.div>
 
           {/* Headline */}
@@ -68,7 +91,7 @@ export default function Hero() {
           >
             <Button
               size="lg"
-              className="rounded-full px-8 py-6 text-base font-semibold bg-sky-500 hover:bg-sky-400 text-white shadow-xl shadow-sky-900/40 cursor-pointer gap-2 transition-all hover:scale-[1.02]"
+              className="rounded-full px-8 py-6 text-base font-semibold bg-sky-500 hover:bg-sky-400 text-white shadow-xl shadow-sky-900/40 cursor-pointer gap-2 transition-all hover:scale-[1.05] active:scale-95"
               asChild
             >
               <a href="#contact">
@@ -79,13 +102,16 @@ export default function Hero() {
             <Button
               size="lg"
               variant="ghost"
-              className="rounded-full px-8 py-6 text-base font-semibold text-white border border-white/30 hover:bg-white/10 backdrop-blur-sm cursor-pointer gap-2 transition-all"
+              className="rounded-full px-8 py-6 text-base font-semibold text-white border border-white/30 hover:bg-white/10 backdrop-blur-sm cursor-pointer gap-2 transition-all hover:scale-[1.05] active:scale-95"
               asChild
             >
               <a href="#videos">
-                <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
+                <motion.div 
+                  whileHover={{ scale: 1.1 }}
+                  className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center"
+                >
                   <Play className="w-4 h-4 fill-white text-white ml-0.5" />
-                </div>
+                </motion.div>
                 Watch Patient Stories
               </a>
             </Button>
@@ -99,10 +125,14 @@ export default function Hero() {
             className="mt-16 flex flex-wrap items-center gap-8"
           >
             {["NIMHANS Trained", "Apollo Hospital", "International Fellowship"].map((item) => (
-              <div key={item} className="flex items-center gap-2">
-                <div className="w-1.5 h-1.5 rounded-full bg-sky-400" />
-                <span className="text-white/80 text-sm">{item}</span>
-              </div>
+              <motion.div 
+                key={item} 
+                whileHover={{ y: -2, opacity: 1 }}
+                className="flex items-center gap-2 cursor-default transition-opacity opacity-80 hover:opacity-100"
+              >
+                <div className="w-1.5 h-1.5 rounded-full bg-sky-400 shadow-[0_0_10px_rgba(56,189,248,0.5)]" />
+                <span className="text-white text-sm font-medium tracking-wide">{item}</span>
+              </motion.div>
             ))}
           </motion.div>
         </div>

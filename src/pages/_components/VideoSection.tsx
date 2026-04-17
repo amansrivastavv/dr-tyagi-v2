@@ -1,25 +1,26 @@
 import { motion } from "motion/react";
 import { Play } from "lucide-react";
 
+
 const videos = [
   {
-    id: "dQw4w9WgXcQ",
+    id: "1h0depqwJ9g",
     title: "Understanding Brain Tumors: A Patient's Guide",
-    duration: "8:42",
+    duration: "3:21",
   },
   {
-    id: "dQw4w9WgXcQ",
+    id: "u8stuPMzTgk",
     title: "Zap-X Radiosurgery: Non-Invasive Brain Treatment",
-    duration: "6:15",
+    duration: "2:07",
   },
   {
-    id: "dQw4w9WgXcQ",
+    id: "vYbblDAk31w",
     title: "Minimally Invasive Neurosurgery Explained",
-    duration: "10:30",
+    duration: "1:01",
   },
   {
-    id: "dQw4w9WgXcQ",
-    title: "Stroke Prevention: Know the Warning Signs",
+    id: "FHB6bPnT0sw",
+    title: "Understanding skull based tumours",
     duration: "5:48",
   },
 ];
