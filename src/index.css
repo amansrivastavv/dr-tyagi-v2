@@ -129,3 +129,9 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  .section-space {
+    @apply py-12 md:py-16;
+  }
+}
