@@ -30,7 +30,6 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             className="inline-flex items-center gap-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full px-4 py-1.5 mb-8"
           >
-            <span className="w-1.5 h-1.5 rounded-full bg-sky-400" />
             <span className="text-white/80 text-[11px] font-semibold tracking-wider uppercase">
               Indraprastha Apollo Hospital, New Delhi
             </span>
@@ -54,8 +53,8 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.35 }}
             className="text-base md:text-lg text-white/75 max-w-2xl mb-10 leading-relaxed"
           >
-            Advanced minimally invasive care for brain tumors, stroke, and complex 
-            neurovascular conditions—powered by global expertise and cutting-edge 
+            Advanced minimally invasive care for brain tumors, stroke, and complex
+            neurovascular conditions—powered by global expertise and cutting-edge
             technologies like <span className="text-sky-300 font-medium">Zap-X radiosurgery</span>.
           </motion.p>
 
@@ -79,7 +78,7 @@ export default function Hero() {
             <Button
               size="lg"
               variant="ghost"
-              className="w-full sm:w-auto rounded-full px-8 py-6 text-base font-semibold text-white border border-white/20 hover:bg-white/5 backdrop-blur-sm cursor-pointer gap-2 transition-all justify-center"
+              className="w-full sm:w-auto rounded-full px-8 py-6 text-base hover:text-white font-semibold text-white border border-white/20 hover:bg-white/5 backdrop-blur-sm cursor-pointer gap-2 transition-all justify-center"
               asChild
             >
               <a href="#videos">
@@ -99,8 +98,8 @@ export default function Hero() {
             className="hidden sm:flex flex-wrap items-center gap-6 lg:gap-8 pb-32 mt-12 lg:mt-16"
           >
             {[
-              "NIMHANS Trained", 
-              "Apollo Hospital", 
+              "NIMHANS Trained",
+              "Apollo Hospital",
               "International Fellowship"
             ].map((item) => (
               <div key={item} className="flex items-center gap-2">
