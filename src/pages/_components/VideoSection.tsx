@@ -12,8 +12,6 @@ const videos = [
     id: "u8stuPMzTgk",
     title: "Zap-X Radiosurgery: Non-Invasive Brain Treatment",
     duration: "2:07",
-    fallbackThumbnail:
-      "https://images.unsplash.com/photo-1748194449456-a6a59f63dcc8?w=480&q=80",
   },
   {
     id: "vYbblDAk31w",
@@ -24,8 +22,6 @@ const videos = [
     id: "FHB6bPnT0sw",
     title: "Understanding skull based tumours",
     duration: "5:48",
-    fallbackThumbnail:
-      "https://images.unsplash.com/photo-1617791160536-598cf32026fb?w=480&q=80",
   },
 ];
 
@@ -67,15 +63,8 @@ export default function VideoSection() {
               {/* Thumbnail */}
               <div className="relative overflow-hidden">
                 <img
-                  src={
-                    video.fallbackThumbnail ??
-                    `https://img.youtube.com/vi/${video.id}/maxresdefault.jpg`
-                  }
+                  src={`https://img.youtube.com/vi/${video.id}/hqdefault.jpg`}
                   alt={video.title}
-                  onError={(event) => {
-                    event.currentTarget.onerror = null;
-                    event.currentTarget.src = `https://img.youtube.com/vi/${video.id}/hqdefault.jpg`;
-                  }}
                   className="w-full h-44 object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors duration-300" />

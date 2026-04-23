@@ -1,6 +1,8 @@
 import { motion } from "motion/react";
 import { CheckCircle2 } from "lucide-react";
 import doctorImg from "@/assets/about/dr_gaurav.jpeg";
+import { Button } from "@/components/ui/button.tsx";
+import { Link } from "react-router-dom";
 
 const DOCTOR_IMG =
   doctorImg;
@@ -107,7 +109,7 @@ export default function DoctorProfile() {
             </p>
 
             {/* Credentials */}
-            <div className="space-y-3">
+            <div className="space-y-3 mb-8">
               {credentials.map((c) => (
                 <div key={c} className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-sky-500 flex-shrink-0 mt-0.5" />
@@ -116,11 +118,17 @@ export default function DoctorProfile() {
               ))}
             </div>
 
-            <div className="mt-8 inline-flex items-center gap-2 bg-sky-50 border border-sky-100 rounded-full px-5 py-2.5">
-              <span className="w-2 h-2 rounded-full bg-sky-500 animate-pulse" />
-              <span className="text-sky-700 text-sm font-medium">
-                Currently accepting new patients
-              </span>
+            <div className="flex flex-col sm:flex-row items-center gap-6">
+              <Button size="lg" className="rounded-full px-8 h-12 shadow-md cursor-pointer text-sm font-semibold w-full sm:w-auto" asChild>
+                <Link to="/about">Read Full Biography</Link>
+              </Button>
+              
+              <div className="inline-flex items-center gap-2 bg-sky-50 border border-sky-100 rounded-full px-5 py-2.5 w-full sm:w-auto justify-center sm:justify-start">
+                <span className="w-2 h-2 rounded-full bg-sky-500 animate-pulse" />
+                <span className="text-sky-700 text-sm font-medium">
+                  Currently accepting patients
+                </span>
+              </div>
             </div>
           </motion.div>
         </div>

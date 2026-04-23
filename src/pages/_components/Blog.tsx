@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { ArrowRight, Clock } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const posts = [
   {
@@ -46,12 +47,13 @@ export default function Blog() {
               From the Doctor&apos;s Desk
             </h2>
           </div>
-          <a
-            href="#blog"
+          <Link
+            to="/articles"
+            onClick={() => window.scrollTo(0, 0)}
             className="flex items-center gap-1.5 text-sky-600 text-sm font-semibold hover:gap-2.5 transition-all cursor-pointer"
           >
             View All Articles <ArrowRight className="w-4 h-4" />
-          </a>
+          </Link>
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-8">

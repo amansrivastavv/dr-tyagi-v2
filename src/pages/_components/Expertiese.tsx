@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
-import { Brain, Activity, Layers, Zap } from "lucide-react";
+import { Brain, Activity, Layers, Zap, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const expertiseItems = [
   {
@@ -71,7 +72,7 @@ export default function Expertise() {
           </p>
         </motion.div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {expertiseItems.map((item, i) => (
             <motion.div
               key={item.title}
@@ -94,6 +95,21 @@ export default function Expertise() {
             </motion.div>
           ))}
         </div>
+
+        <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="flex justify-center"
+        >
+            <Link 
+                to="/expertise" 
+                className="group inline-flex items-center gap-3 px-8 py-4 bg-slate-900 text-white rounded-full text-xs font-bold uppercase tracking-widest hover:bg-sky-600 transition-all shadow-lg"
+            >
+                View Full Surgical Portfolio
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </Link>
+        </motion.div>
       </div>
     </section>
   );
