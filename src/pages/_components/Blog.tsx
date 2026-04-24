@@ -61,7 +61,7 @@ export default function Blog() {
                 </div>
 
                 <div className="flex items-center gap-4 text-muted-foreground text-xs font-semibold uppercase tracking-widest mb-4">
-                  <span>{post.date || "APRIL 24, 2024"}</span>
+                  <span>{post.publishedDate}</span>
                   <span className="w-1 h-1 rounded-full bg-border" />
                   <span>{post.readTime}</span>
                 </div>
