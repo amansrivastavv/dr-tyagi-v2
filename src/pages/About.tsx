@@ -84,7 +84,7 @@ export default function About() {
                 className="flex items-center gap-16 border-t border-border pt-12"
               >
                 <div>
-                  <p className="text-5xl font-serif text-foreground">15+</p>
+                  <p className="text-5xl font-serif text-foreground">10+</p>
                   <p className="text-[10px] uppercase tracking-widest text-muted-foreground mt-2">Years Experience</p>
                 </div>
                 <div className="h-12 w-[1px] bg-border" />

@@ -89,7 +89,7 @@ export default function Expertise() {
                                     <p className="text-[10px] uppercase tracking-[0.3em] font-bold text-sky-600/60 mb-2">
                                         Years
                                     </p>
-                                    <p className="text-5xl font-serif text-slate-900">18+</p>
+                                    <p className="text-5xl font-serif text-slate-900">15+</p>
                                 </div>
 
                                 {/* Cases */}

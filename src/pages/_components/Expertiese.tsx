@@ -60,34 +60,31 @@ export default function Expertise() {
               <div className="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-background transition-all duration-500">
                 <item.icon className="w-6 h-6" />
               </div>
-              
+
               <span className="text-primary text-[10px] font-bold uppercase tracking-widest mb-2">
                 {item.category}
               </span>
-              
+
               <h3 className="text-xl font-serif text-foreground mb-4 group-hover:text-primary transition-colors">
                 {item.title}
               </h3>
-              
-              <p className="text-muted-foreground text-sm leading-relaxed font-light mb-6 flex-grow">
+
+              <p className="text-muted-foreground text-sm leading-relaxed font-light flex-grow">
                 {item.description}
               </p>
-              
-              <div className="mt-auto flex items-center text-primary text-xs font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 -translate-x-4 group-hover:translate-x-0 transition-all duration-500">
-                Learn more <ArrowRight className="w-4 h-4 ml-2" />
-              </div>
+
             </motion.div>
           ))}
         </div>
-        
-        <motion.div 
+
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="mt-16 flex justify-center"
         >
-          <Link 
-            to="/expertise" 
+          <Link
+            to="/expertise"
             className="group flex items-center gap-3 px-8 py-4 bg-primary text-background rounded-full text-xs font-bold uppercase tracking-widest hover:bg-foreground hover:text-white transition-all shadow-lg shadow-primary/20"
           >
             View Full Surgical Portfolio

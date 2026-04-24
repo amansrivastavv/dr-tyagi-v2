@@ -9,19 +9,19 @@ export default function HeroElite() {
         {/* Background Brain Image */}
         <div className="absolute inset-0 z-0 flex items-center justify-end pointer-events-none">
           <motion.div
-             initial={{ opacity: 0, scale: 1.05, x: 50 }}
-             animate={{ opacity: 1, scale: 1, x: 0 }}
-             transition={{ duration: 2.5, ease: [0.16, 1, 0.3, 1] }}
-             className="w-full h-full lg:w-[80%] lg:h-full relative translate-y-20 lg:translate-y-0"
+            initial={{ opacity: 0, scale: 1.05, x: 50 }}
+            animate={{ opacity: 1, scale: 1, x: 0 }}
+            transition={{ duration: 2.5, ease: [0.16, 1, 0.3, 1] }}
+            className="w-full h-full lg:w-[80%] lg:h-full relative translate-y-20 lg:translate-y-0"
           >
-            <img 
-              src={brainImg} 
-              alt="Anatomical Brain Render" 
+            <img
+              src={brainImg}
+              alt="Anatomical Brain Render"
               className="w-full h-full object-contain object-right opacity-80 mix-blend-screen"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-background via-background/10 to-transparent z-10" />
             <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-transparent to-background/40 z-10" />
-            
+
             {/* Anatomical Labels */}
             <div className="hidden lg:block">
               <Label x="45%" y="30%" text="GLIOMAS" delay={2} />
@@ -36,27 +36,25 @@ export default function HeroElite() {
         <div className="relative z-20 flex-grow flex items-center">
           <div className="max-w-7xl mx-auto w-full px-8 pt-12 md:pt-0">
             <div className="max-w-3xl">
-              <motion.h1 
+              <motion.h1
                 initial={{ opacity: 0, x: -30 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 1.2, delay: 0.8, ease: "easeOut" }}
                 className="text-foreground text-5xl md:text-6xl lg:text-7xl font-serif leading-[1.1] mb-10 tracking-tight"
               >
-                Millimeters <br />
-                Decide <br />
-                Everything.
+                When It’s Your <br />
+                Brain Expertise <br /> Matters Most.
               </motion.h1>
-              
-              <motion.p 
+
+              <motion.p
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 0.7 }}
                 transition={{ duration: 1.5, delay: 1.2 }}
                 className="text-foreground/80 text-base md:text-lg font-light leading-relaxed mb-10 max-w-md tracking-wide"
               >
-                Advanced neurosurgical care for tumors, stroke, and complex cranial conditions. 
-                Precision-engineered treatment for the most critical pathways.
+                Advanced minimally invasive care for brain tumors, stroke, and complex neurovascular conditions—powered by global expertise and cutting-edge technologies like Zap-X radiosurgery for precise, non-invasive treatment.
               </motion.p>
-              
+
               <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -77,7 +75,7 @@ export default function HeroElite() {
             <div className="h-px w-24 bg-foreground/5" />
             <div className="text-foreground/20 text-[10px] font-bold tracking-[0.4em] uppercase font-serif">STANDARD OF CARE</div>
           </div>
-          
+
           {/* Decorative corner element */}
           <div className="h-24 w-px bg-gradient-to-t from-foreground/10 to-transparent hidden lg:block" />
         </div>
@@ -89,7 +87,7 @@ export default function HeroElite() {
 
 function Label({ x, y, text, delay }: { x: string; y: string; text: string; delay: number }) {
   return (
-    <motion.div 
+    <motion.div
       initial={{ opacity: 0, scale: 0 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.8, delay }}
