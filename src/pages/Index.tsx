@@ -1,5 +1,5 @@
 import Navbar from "./_components/Navbar.tsx";
-import Hero from "./_components/Hero.tsx";
+import Hero from "./_components/HeroElite.tsx";
 import DoctorProfile from "./_components/DoctorProfile.tsx";
 import StatsStrip from "./_components/StatsStrip.tsx";
 import Expertise from "./_components/Expertiese.tsx";

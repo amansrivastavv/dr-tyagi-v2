@@ -2,113 +2,97 @@ import { motion } from "motion/react";
 import { Brain, Activity, Layers, Zap, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
-const expertiseItems = [
+const expertiseData = [
   {
     icon: Brain,
+    category: "Minimally Invasive",
     title: "Brain Tumors",
-    subtitle: "Minimally Invasive",
-    description:
-      "Advanced resection techniques for all types of brain tumors—from meningiomas to glioblastomas—with maximum tumor removal and minimal impact on healthy tissue.",
-    color: "sky",
+    description: "Advanced resection techniques for all types of brain tumors—from meningiomas to glioblastomas—with maximum tumor removal and minimal impact on healthy tissue.",
   },
   {
     icon: Activity,
+    category: "Neurovascular Care",
     title: "Stroke & Aneurysm",
-    subtitle: "Neurovascular Care",
-    description:
-      "Comprehensive treatment for cerebrovascular diseases including ischemic stroke, hemorrhagic stroke, and complex intracranial aneurysms using endovascular techniques.",
-    color: "blue",
+    description: "Comprehensive treatment for cerebrovascular diseases including ischemic stroke, hemorrhagic stroke, and complex intracranial aneurysms using endovascular techniques.",
   },
   {
     icon: Layers,
+    category: "Complex Resections",
     title: "Skull Base Surgery",
-    subtitle: "Complex Resections",
-    description:
-      "Highly specialized skull base approaches for tumors involving the skull base, cranial nerves, and surrounding critical structures with international fellowship training.",
-    color: "indigo",
+    description: "Highly specialized skull base approaches for tumors involving the skull base, cranial nerves, and surrounding critical structures with international fellowship training.",
   },
   {
     icon: Zap,
+    category: "Zap-X Technology",
     title: "Stereotactic Radiosurgery",
-    subtitle: "Zap-X Technology",
-    description:
-      "Non-invasive, highly precise radiation delivery using the Zap-X gyroscopic radiosurgery system—ideal for brain tumors, AVMs, and functional disorders.",
-    color: "cyan",
+    description: "Non-invasive, highly precise radiation delivery using the Zap-X gyroscopic radiosurgery system—ideal for brain tumors, AVMs, and functional disorders.",
   },
 ];
 
-const colorMap: Record<string, string> = {
-  sky: "bg-sky-50 border-sky-100 group-hover:bg-sky-500",
-  blue: "bg-blue-50 border-blue-100 group-hover:bg-blue-500",
-  indigo: "bg-indigo-50 border-indigo-100 group-hover:bg-indigo-500",
-  cyan: "bg-cyan-50 border-cyan-100 group-hover:bg-cyan-500",
-};
-const iconColorMap: Record<string, string> = {
-  sky: "text-sky-500 group-hover:text-white",
-  blue: "text-blue-500 group-hover:text-white",
-  indigo: "text-indigo-500 group-hover:text-white",
-  cyan: "text-cyan-500 group-hover:text-white",
-};
-
 export default function Expertise() {
   return (
-    <section id="expertise" className="section-space bg-background">
+    <section id="expertise" className="py-24 bg-background">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <span className="text-sky-600 text-sm font-semibold tracking-widest uppercase">
-            Key Expertise
-          </span>
-          <h2 className="text-4xl lg:text-5xl font-serif text-foreground mt-2">
-            Specialized in What Matters
-          </h2>
-          <p className="text-muted-foreground mt-4 max-w-xl mx-auto">
-            Every condition requires a unique approach. Dr. Tyagi brings specialized training
-            and cutting-edge tools to deliver the best outcomes.
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+          <div className="max-w-2xl">
+            <span className="text-primary text-sm font-semibold tracking-widest uppercase">
+              Key Expertise
+            </span>
+            <h2 className="text-4xl lg:text-5xl font-serif text-foreground mt-2 leading-tight">
+              Specialized in What Matters
+            </h2>
+          </div>
+          <p className="text-muted-foreground max-w-sm text-lg font-light leading-relaxed">
+            Every condition requires a unique approach. Dr. Tyagi brings specialized training and cutting-edge tools to deliver the best outcomes.
           </p>
-        </motion.div>
+        </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-          {expertiseItems.map((item, i) => (
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {expertiseData.map((item, i) => (
             <motion.div
               key={item.title}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="group bg-background rounded-2xl p-6 border border-border shadow-sm hover:shadow-xl hover:shadow-sky-900/8 transition-all duration-300 hover:-translate-y-1 cursor-default"
+              transition={{ delay: i * 0.1 }}
+              className="group p-8 rounded-2xl bg-card border border-border hover:border-primary/20 hover:shadow-2xl hover:shadow-primary/5 transition-all duration-500 cursor-pointer flex flex-col"
             >
-              <div
-                className={`w-12 h-12 rounded-xl border flex items-center justify-center mb-5 transition-all duration-300 ${colorMap[item.color]}`}
-              >
-                <item.icon className={`w-6 h-6 transition-colors duration-300 ${iconColorMap[item.color]}`} />
+              <div className="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-background transition-all duration-500">
+                <item.icon className="w-6 h-6" />
               </div>
-              <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-1">
-                {item.subtitle}
+              
+              <span className="text-primary text-[10px] font-bold uppercase tracking-widest mb-2">
+                {item.category}
+              </span>
+              
+              <h3 className="text-xl font-serif text-foreground mb-4 group-hover:text-primary transition-colors">
+                {item.title}
+              </h3>
+              
+              <p className="text-muted-foreground text-sm leading-relaxed font-light mb-6 flex-grow">
+                {item.description}
               </p>
-              <h3 className="text-lg font-bold text-foreground mb-3">{item.title}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
+              
+              <div className="mt-auto flex items-center text-primary text-xs font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 -translate-x-4 group-hover:translate-x-0 transition-all duration-500">
+                Learn more <ArrowRight className="w-4 h-4 ml-2" />
+              </div>
             </motion.div>
           ))}
         </div>
-
+        
         <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="flex justify-center"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mt-16 flex justify-center"
         >
-            <Link 
-                to="/expertise" 
-                className="group inline-flex items-center gap-3 px-8 py-4 bg-slate-900 text-white rounded-full text-xs font-bold uppercase tracking-widest hover:bg-sky-600 transition-all shadow-lg"
-            >
-                View Full Surgical Portfolio
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </Link>
+          <Link 
+            to="/expertise" 
+            className="group flex items-center gap-3 px-8 py-4 bg-primary text-background rounded-full text-xs font-bold uppercase tracking-widest hover:bg-foreground hover:text-white transition-all shadow-lg shadow-primary/20"
+          >
+            View Full Surgical Portfolio
+            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+          </Link>
         </motion.div>
       </div>
     </section>

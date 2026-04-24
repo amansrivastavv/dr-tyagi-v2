@@ -42,13 +42,13 @@ function Counter({ target, suffix }: { target: number; suffix: string }) {
 
 export default function StatsStrip() {
   return (
-    <section className="relative py-12 overflow-hidden">
-      {/* Gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-sky-600 via-blue-700 to-sky-800" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(255,255,255,0.08)_0%,transparent_60%)]" />
+    <section className="relative py-12 overflow-hidden border-y border-border">
+      {/* Light theme background */}
+      <div className="absolute inset-0 bg-[#E0F7FF]/30" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(127,231,255,0.1)_0%,transparent_70%)]" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-0 lg:divide-x lg:divide-white/20">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-0 lg:divide-x lg:divide-border/50">
           {stats.map((stat, i) => (
             <motion.div
               key={stat.label}
@@ -58,13 +58,13 @@ export default function StatsStrip() {
               transition={{ duration: 0.5, delay: i * 0.1 }}
               className="flex flex-col items-center text-center px-6 py-2"
             >
-              <div className="w-10 h-10 rounded-xl bg-white/15 flex items-center justify-center mb-3">
-                <stat.icon className="w-5 h-5 text-white" />
+              <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center mb-3 shadow-lg shadow-primary/20">
+                <stat.icon className="w-5 h-5 text-foreground" />
               </div>
-              <p className="text-3xl lg:text-4xl font-bold text-white">
+              <p className="text-3xl lg:text-4xl font-bold text-foreground tracking-tight">
                 <Counter target={stat.value} suffix={stat.suffix} />
               </p>
-              <p className="text-sky-100 text-sm mt-1">{stat.label}</p>
+              <p className="text-muted-foreground text-xs uppercase tracking-widest mt-2 font-semibold">{stat.label}</p>
             </motion.div>
           ))}
         </div>
@@ -72,3 +72,4 @@ export default function StatsStrip() {
     </section>
   );
 }
+

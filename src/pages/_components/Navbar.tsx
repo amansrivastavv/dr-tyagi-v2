@@ -44,7 +44,7 @@ export default function Navbar() {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled || location.pathname !== "/"
-        ? "bg-background/95 backdrop-blur-md shadow-[0_2px_24px_rgba(14,165,233,0.08)] border-b border-border"
+        ? "bg-background/95 backdrop-blur-md shadow-[0_2px_24px_rgba(127,231,255,0.08)] border-b border-border"
         : "bg-transparent"
         }`}
     >
@@ -53,7 +53,7 @@ export default function Navbar() {
         <Link to="/" className="flex items-center gap-3 cursor-pointer">
           <div>
             <p className={`text-sm font-semibold leading-none transition-colors duration-300 ${scrolled || location.pathname !== "/" ? "text-foreground" : "text-white"}`}>Dr. Gaurav Tyagi</p>
-            <p className={`text-[11px] mt-0.5 transition-colors duration-300 ${scrolled || location.pathname !== "/" ? "text-muted-foreground" : "text-white/70"}`}>Senior Neurosurgeon</p>
+            <p className={`text-[11px] mt-0.5 transition-colors duration-300 ${scrolled || location.pathname !== "/" ? "text-primary" : "text-primary"}`}>Senior Neurosurgeon</p>
           </div>
         </Link>
 
@@ -73,11 +73,11 @@ export default function Navbar() {
 
         {/* CTA */}
         <div className="hidden lg:flex items-center gap-4">
-          <a href="tel:+911234567890" className={`flex items-center gap-1.5 text-sm font-medium transition-colors cursor-pointer ${scrolled || location.pathname !== "/" ? "text-primary" : "text-white"}`}>
+          <a href="tel:+911234567890" className={`flex items-center gap-1.5 text-sm font-medium transition-colors cursor-pointer ${scrolled || location.pathname !== "/" ? "text-muted-foreground hover:text-primary" : "text-white/80 hover:text-white"}`}>
             <Phone className="w-4 h-4" />
             +91 12345 67890
           </a>
-          <Button className="rounded-full px-6 h-10 shadow-md cursor-pointer text-sm font-semibold" asChild>
+          <Button className="rounded-full px-6 h-10 bg-primary text-background hover:bg-foreground hover:text-white shadow-md cursor-pointer text-sm font-semibold transition-all" asChild>
             <Link to="/#contact">Book Appointment</Link>
           </Button>
         </div>
@@ -89,6 +89,8 @@ export default function Navbar() {
         >
           {menuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
         </button>
+
+
       </div>
 
       {/* Mobile Menu */}
