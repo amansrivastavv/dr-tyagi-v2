@@ -68,12 +68,12 @@ export default function About() {
                 animate={{ opacity: 1, y: 0 }}
                 className="mb-12"
               >
-                <h1 className="text-editorial text-6xl md:text-8xl lg:text-[7.5rem] leading-[0.9] mb-12">
-                  Precision Surgery. <br />
-                  Compassionate Care.
+                <h1 className="text-editorial text-6xl md:text-6xl lg:text-[7.5rem] leading-[0.9] mb-12">
+                 Surgical Precision. <br />
+                  Patient-First Care.
                 </h1>
                 <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl font-light">
-                  Dr. Gaurav Tyagi is a Senior Consultant Neurosurgeon at Indraprastha Apollo Hospital, New Delhi, specializing in advanced brain tumor surgery, stroke care, and radiosurgery.
+                 Dr. Gaurav Tyagi is a leading neurosurgeon known for his precise, patient-focused approach and strong academic foundation. Currently a Senior Consultant at Indraprastha Apollo Hospitals, he trained at National Institute of Mental Health and Neuro Sciences (NIMHANS), where he also served as faculty.
                 </p>
               </motion.div>
 

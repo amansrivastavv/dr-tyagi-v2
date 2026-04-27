@@ -10,6 +10,12 @@ import strokeImg from "@/assets/expertise/stroke.png";
 import skullBaseImg from "@/assets/expertise/skull_base.png";
 import radiosurgeryImg from "@/assets/expertise/radiosurgery.png";
 
+const expertiseImageFrame =
+    "relative aspect-[4/3] overflow-hidden rounded-[2rem] bg-slate-100 shadow-2xl";
+
+const expertiseImage =
+    "h-full w-full object-cover transition-all duration-700 group-hover:scale-105";
+
 const domains = [
     { id: "01", title: "Brain Tumors & Gliomas", anchor: "brain-tumors" },
     { id: "02", title: "Stroke & Aneurysm Management", anchor: "stroke" },
@@ -89,16 +95,16 @@ export default function Expertise() {
                                     <p className="text-[10px] uppercase tracking-[0.3em] font-bold text-sky-600/60 mb-2">
                                         Years
                                     </p>
-                                    <p className="text-5xl font-serif text-slate-900">15+</p>
+                                    <p className="text-5xl font-serif text-slate-900">10+</p>
                                 </div>
 
                                 {/* Cases */}
-                                <div className="text-center lg:text-left">
+                                {/* <div className="text-center lg:text-left">
                                     <p className="text-[10px] uppercase tracking-[0.3em] font-bold text-sky-600/60 mb-2">
                                         Cases
                                     </p>
                                     <p className="text-5xl font-serif text-slate-900">4,200</p>
-                                </div>
+                                </div> */}
 
                                 {/* Subspecialties (full width + centered) */}
                                 <div className="col-span-2 text-center lg:text-left">
@@ -144,19 +150,21 @@ export default function Expertise() {
                                 initial={{ opacity: 0, x: -30 }}
                                 whileInView={{ opacity: 1, x: 0 }}
                                 viewport={{ once: true }}
-                                className="relative"
+                                className="group relative"
                             >
                                 <div className="absolute -inset-4 border border-sky-100 rounded-[2.5rem] -rotate-2" />
-                                <img
-                                    src={brainTumorImg}
-                                    alt="Brain Tumor Mapping"
-                                    className="relative w-full rounded-[2rem] shadow-2xl grayscale-[0.2] hover:grayscale-0 transition-all duration-700"
-                                />
+                                <div className={expertiseImageFrame}>
+                                    <img
+                                        src={brainTumorImg}
+                                        alt="Brain Tumor Mapping"
+                                        className={`${expertiseImage} grayscale-[0.2] group-hover:grayscale-0`}
+                                    />
+                                </div>
                             </motion.div>
                             <div>
                                 <div className="flex items-center gap-4 mb-6">
                                     <span className="h-[1px] w-12 bg-sky-600" />
-                                    <p className="text-sky-600 font-bold tracking-[0.2em] uppercase text-xs">Pathology 01 —— Cranial Surgery</p>
+                                    <p className="text-sky-600 font-bold tracking-[0.2em] uppercase text-xs">Pathology 01 -- Cranial Surgery</p>
                                 </div>
                                 <h2 className="text-5xl md:text-6xl font-serif mb-8 leading-tight">Brain Tumors & <br /> Gliomas</h2>
                                 <p className="text-lg text-muted-foreground leading-relaxed mb-8">
@@ -176,7 +184,7 @@ export default function Expertise() {
                             <div className="order-2 lg:order-1">
                                 <div className="flex items-center gap-4 mb-6">
                                     <span className="h-[1px] w-12 bg-sky-400" />
-                                    <p className="text-sky-400 font-bold tracking-[0.2em] uppercase text-xs">Vascular 02 —— Critical Care</p>
+                                    <p className="text-sky-400 font-bold tracking-[0.2em] uppercase text-xs">Vascular 02 -- Critical Care</p>
                                 </div>
                                 <h2 className="text-5xl md:text-6xl font-serif mb-8 leading-tight">Stroke & <br /> Aneurysm</h2>
                                 <p className="text-lg text-white/60 leading-relaxed mb-8">
@@ -189,13 +197,16 @@ export default function Expertise() {
                                 initial={{ opacity: 0, scale: 0.9 }}
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 viewport={{ once: true }}
-                                className="order-1 lg:order-2"
+                                className="group relative order-1 lg:order-2"
                             >
-                                <img
-                                    src={strokeImg}
-                                    alt="Vascular Visualization"
-                                    className="relative w-full rounded-[2rem] shadow-2xl transition-transform duration-700"
-                                />
+                                <div className="absolute -inset-4 border border-white/10 rounded-[2.5rem] rotate-2" />
+                                <div className={`${expertiseImageFrame} bg-slate-900`}>
+                                    <img
+                                        src={strokeImg}
+                                        alt="Vascular Visualization"
+                                        className={expertiseImage}
+                                    />
+                                </div>
                             </motion.div>
                         </div>
                     </div>
@@ -209,17 +220,21 @@ export default function Expertise() {
                                 initial={{ opacity: 0, y: 30 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
+                                className="group relative"
                             >
-                                <img
-                                    src={skullBaseImg}
-                                    alt="Advanced Skull Base Models"
-                                    className="relative w-full max-w-md mx-auto grayscale-[0.5] hover:grayscale-0 transition-all duration-1000"
-                                />
+                                <div className="absolute -inset-4 border border-sky-100 rounded-[2.5rem] -rotate-2" />
+                                <div className={expertiseImageFrame}>
+                                    <img
+                                        src={skullBaseImg}
+                                        alt="Advanced Skull Base Models"
+                                        className={`${expertiseImage} grayscale-[0.35] group-hover:grayscale-0`}
+                                    />
+                                </div>
                             </motion.div>
                             <div>
                                 <div className="flex items-center gap-4 mb-6">
                                     <span className="h-[1px] w-12 bg-sky-600" />
-                                    <p className="text-sky-600 font-bold tracking-[0.2em] uppercase text-xs">Pioneering 03 —— Complex Access</p>
+                                    <p className="text-sky-600 font-bold tracking-[0.2em] uppercase text-xs">Pioneering 03 -- Complex Access</p>
                                 </div>
                                 <h2 className="text-5xl md:text-6xl font-serif mb-8 leading-tight">Advanced Skull <br /> Base Surgery</h2>
                                 <p className="text-lg text-muted-foreground leading-relaxed mb-8">
@@ -236,7 +251,10 @@ export default function Expertise() {
                     <div className="max-w-7xl mx-auto px-6 lg:px-8">
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
                             <div>
-                                <p className="text-sky-400 font-bold tracking-[0.2em] uppercase text-xs mb-4">Innovation 04 —— Non-Invasive</p>
+                                <div className="flex items-center gap-4 mb-6">
+                                    <span className="h-[1px] w-12 bg-sky-400" />
+                                    <p className="text-sky-400 font-bold tracking-[0.2em] uppercase text-xs">Innovation 04 -- Non-Invasive</p>
+                                </div>
                                 <h2 className="text-5xl md:text-6xl font-serif mb-8 leading-tight">Stereotactic <br /> Radiosurgery</h2>
                                 <p className="text-lg text-white/50 leading-relaxed mb-12">
                                     The pinnacle of non-surgical brain treatments, delivering high-dose
@@ -247,12 +265,16 @@ export default function Expertise() {
                                 initial={{ opacity: 0, x: 40 }}
                                 whileInView={{ opacity: 1, x: 0 }}
                                 viewport={{ once: true }}
+                                className="group relative"
                             >
-                                <img
-                                    src={radiosurgeryImg}
-                                    alt="Radiosurgery Suite"
-                                    className="relative w-full rounded-[2.5rem] shadow-2xl border border-white/5"
-                                />
+                                <div className="absolute -inset-4 border border-white/10 rounded-[2.5rem] rotate-2" />
+                                <div className={`${expertiseImageFrame} bg-slate-900 border border-white/5`}>
+                                    <img
+                                        src={radiosurgeryImg}
+                                        alt="Radiosurgery Suite"
+                                        className={expertiseImage}
+                                    />
+                                </div>
                             </motion.div>
                         </div>
                     </div>

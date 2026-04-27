@@ -63,7 +63,7 @@ export default function DoctorProfile() {
                 <p className="text-lg font-bold text-foreground">Dr. Gaurav Tyagi</p>
                 <p className="text-primary text-sm font-medium">Senior Consultant Neurosurgeon</p>
                 <p className="text-muted-foreground text-xs mt-0.5">
-                  Skull Base · Cerebrovascular · Radiosurgery
+                  Skull Base · Cerebrovascular · Radiosurgery Specialist
                 </p>
               </div>
             </div>

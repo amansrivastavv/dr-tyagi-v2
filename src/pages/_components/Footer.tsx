@@ -2,7 +2,7 @@ import { Brain, Phone, Mail, MapPin, ExternalLink } from "lucide-react";
 
 const quickLinks = [
   { label: "Home", href: "#home" },
-  { label: "About Dr. Tyagi", href: "#about" },
+  { label: "About Dr. Gaurav Tyagi", href: "#about" },
   { label: "Expertise", href: "#expertise" },
   { label: "Patient Stories", href: "#testimonials" },
   { label: "Blog", href: "#blog" },

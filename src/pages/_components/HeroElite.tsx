@@ -23,12 +23,12 @@ export default function HeroElite() {
             <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-transparent to-background/40 z-10" />
 
             {/* Anatomical Labels */}
-            <div className="hidden lg:block">
+            {/* <div className="hidden lg:block">
               <Label x="45%" y="30%" text="GLIOMAS" delay={2} />
               <Label x="28%" y="42%" text="RADIOSURGERY" delay={2.2} />
               <Label x="52%" y="68%" text="SKULL BASE" delay={2.4} />
               <Label x="72%" y="48%" text="STROKE" delay={2.6} />
-            </div>
+            </div> */}
           </motion.div>
         </div>
 

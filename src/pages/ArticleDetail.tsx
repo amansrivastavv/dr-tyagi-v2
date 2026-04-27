@@ -125,7 +125,6 @@ export default function ArticleDetail() {
                 {["Neurosurgery", "Brain Health", "Precision Medicine", "Patient Care"].map(topic => (
                   <div key={topic} className="flex items-center justify-between group cursor-pointer">
                     <span className="text-sm font-medium text-slate-600 group-hover:text-sky-700 transition-colors">{topic}</span>
-                    <ArrowLeft className="w-3.5 h-3.5 rotate-180 text-slate-300 group-hover:text-sky-600 transition-all group-hover:translate-x-1" />
                   </div>
                 ))}
               </div>
