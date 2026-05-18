@@ -8,11 +8,11 @@ const DOCTOR_IMG =
   doctorImg;
 
 const credentials = [
-  "MBBS & MS – NIMHANS, Bengaluru",
+  "MCh (Neurosurgery) – NIMHANS, Bengaluru",
+  "MS (General Surgery) – SMS Medical College, India",
+  "MBBS – Government Medical College, Miraj",
   "Fellowship in Skull Base Surgery – Zurich, Switzerland",
-  "International Training – Osaka, Japan",
   "Senior Consultant – Indraprastha Apollo Hospital, New Delhi",
-  "Member, Neurological Society of India",
   "45+ peer-reviewed research publications",
 ];
 
