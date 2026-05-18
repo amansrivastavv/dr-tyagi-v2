@@ -270,7 +270,6 @@ export default function About() {
             >
               <h2 className="text-3xl md:text-4xl font-serif text-slate-900">Surgical Philosophy</h2>
             </motion.div>
-            <div className="hidden md:block flex-1 border-b border-slate-200 ml-12 mb-2" />
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-x-12 gap-y-16">
