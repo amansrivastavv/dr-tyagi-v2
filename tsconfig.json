@@ -21,7 +21,6 @@
     "resolveJsonModule": true,
 
     "paths": {
-      "@/convex/*": ["./convex/*"],
       "@/*": ["./src/*"]
     }
   },

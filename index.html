@@ -44,10 +44,7 @@
     try {
       let theme = localStorage.getItem("theme");
       if (theme === "system" || !theme) {
-        let prefersDark = window.matchMedia(
-          "(prefers-color-scheme: dark)",
-        ).matches;
-        theme = prefersDark ? "dark" : "light";
+        theme = "light";
       }
       document.documentElement.classList.add(theme);
     } catch (e) { }
