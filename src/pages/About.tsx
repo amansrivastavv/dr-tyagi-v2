@@ -159,58 +159,72 @@ export default function About() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-12 lg:pt-44 lg:pb-16">
+      <section className="pt-32 pb-16 lg:pt-44 lg:pb-20 relative overflow-hidden">
+        {/* Soft background luxury glow */}
+        <div className="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-cyan-50/30 blur-3xl pointer-events-none -z-10" />
+        
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-center">
             
-            {/* Image Side */}
-            <div className="lg:col-span-5 order-2 lg:order-1">
+            {/* Image Side with Elegant Arch Framing */}
+            <div className="lg:col-span-5 order-2 lg:order-1 relative">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
+                transition={{ duration: 0.85, ease: "easeOut" }}
                 className="relative"
               >
-                <div className="aspect-[3/4] bg-slate-100 relative overflow-hidden">
+                {/* Visual Glow behind image */}
+                <div className="absolute -left-6 -top-6 w-32 h-32 rounded-full bg-cyan-100/50 blur-2xl pointer-events-none -z-10 animate-pulse" />
+                <div className="absolute -right-6 -bottom-6 w-32 h-32 rounded-full bg-blue-50/50 blur-2xl pointer-events-none -z-10" />
+                
+                {/* Premium Arch Frame */}
+                <div className="aspect-[3/4] bg-slate-50 relative overflow-hidden rounded-t-[12rem] rounded-b-[2rem] border border-slate-200/60 shadow-2xl shadow-slate-100">
                   <img
                     src={doctorImg}
                     alt="Dr. Gaurav Tyagi"
-                    className="w-full h-full object-cover grayscale-[20%] contrast-100"
+                    className="w-full h-full object-cover grayscale-[12%] contrast-[105%] hover:scale-[1.03] transition-transform duration-700 ease-out"
                   />
                 </div>
-                {/* Minimal accent line indicating image framing */}
-                <div className="absolute -left-4 top-12 w-[2px] h-24 bg-cyan-500" />
               </motion.div>
             </div>
 
-            {/* Text Side */}
-            <div className="lg:col-span-7 order-1 lg:order-2 lg:pt-12">
+            {/* Architectural Text Side */}
+            <div className="lg:col-span-7 order-1 lg:order-2 lg:pl-6">
               <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.15 }}
               >
-                <h1 className="font-serif text-5xl md:text-6xl lg:text-[5.5rem] leading-[1.1] text-slate-900 mb-8 tracking-tight">
-                  Surgical precision.<br />
-                  <span className="text-slate-400">Patient first.</span>
+                {/* Clean, editorial-style subtitle */}
+                <p className="text-[10px] font-bold font-mono uppercase tracking-[0.25em] text-cyan-600 mb-6">
+                  Senior Consultant Neurosurgeon
+                </p>
+
+                <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl leading-[1.05] text-slate-900 mb-8 tracking-tight">
+                  Surgical <span className="italic font-light text-slate-400">precision</span>.<br />
+                  Patient <span className="text-cyan-700 font-medium">first</span>.
                 </h1>
                 
-                <div className="w-12 h-[2px] bg-cyan-500 mb-8" />
-                
-                <div className="space-y-6 text-slate-600 leading-relaxed font-light mb-16 max-w-xl">
-                  <p className="text-lg md:text-xl">
-                    Dr. Gaurav Tyagi is a leading neurosurgeon known for his precise, patient-focused approach and strong academic foundation. Currently a Senior Consultant at Indraprastha Apollo Hospitals, he trained at National Institute of Mental Health and Neuro Sciences (NIMHANS), where he also served as faculty.
+                <div className="space-y-6 text-slate-600 leading-relaxed font-light mb-12 max-w-2xl">
+                  <p className="text-lg md:text-xl font-light">
+                    Dr. Gaurav Tyagi is a leading neurosurgeon known for his precise, patient-focused approach and strong academic foundation. Currently a Senior Consultant at <span className="font-medium text-slate-800">Indraprastha Apollo Hospitals</span>, he trained at <span className="font-medium text-slate-800">National Institute of Mental Health and Neuro Sciences (NIMHANS)</span>, where he also served as faculty.
                   </p>
                 </div>
 
-                <div className="grid grid-cols-2 gap-12 border-t border-slate-200 pt-12 max-w-md">
-                  <div>
-                    <p className="text-4xl font-serif text-slate-900 mb-2">10<span className="text-cyan-500 text-3xl font-sans">+</span></p>
-                    <p className="text-[11px] uppercase tracking-[0.15em] text-slate-500 font-medium">Years Experience</p>
+                {/* Enhanced Counter Grid */}
+                <div className="grid grid-cols-2 gap-8 md:gap-12 border-t border-slate-200/60 pt-8 max-w-md">
+                  <div className="group">
+                    <p className="text-4xl md:text-5xl font-serif text-slate-900 mb-1 group-hover:text-cyan-600 transition-colors">
+                      10<span className="text-cyan-500 font-sans text-2xl font-semibold">+</span>
+                    </p>
+                    <p className="text-[10px] uppercase tracking-[0.2em] text-slate-400 font-bold">Years Experience</p>
                   </div>
-                  <div>
-                    <p className="text-4xl font-serif text-slate-900 mb-2">45<span className="text-cyan-500 text-3xl font-sans">+</span></p>
-                    <p className="text-[11px] uppercase tracking-[0.15em] text-slate-500 font-medium">Research Pubs</p>
+                  <div className="group">
+                    <p className="text-4xl md:text-5xl font-serif text-slate-900 mb-1 group-hover:text-cyan-600 transition-colors">
+                      45<span className="text-cyan-500 font-sans text-2xl font-semibold">+</span>
+                    </p>
+                    <p className="text-[10px] uppercase tracking-[0.2em] text-slate-400 font-bold">Research Pubs</p>
                   </div>
                 </div>
               </motion.div>
