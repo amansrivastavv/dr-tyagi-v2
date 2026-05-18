@@ -202,8 +202,8 @@ export default function About() {
                 </p>
 
                 <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl leading-[1.05] text-slate-900 mb-8 tracking-tight">
-                  Surgical <span className="italic font-light text-slate-400">precision</span>.<br />
-                  Patient <span className="text-cyan-700 font-medium">first</span>.
+                  Surgical precision.<br />
+                  <span className="text-slate-400">Patient first.</span>
                 </h1>
                 
                 <div className="space-y-6 text-slate-600 leading-relaxed font-light mb-12 max-w-2xl">
