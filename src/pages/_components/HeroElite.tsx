@@ -11,12 +11,12 @@ export default function HeroElite() {
           initial={{ opacity: 0, scale: 1.05, x: 50 }}
           animate={{ opacity: 1, scale: 1, x: 0 }}
           transition={{ duration: 2.5, ease: [0.16, 1, 0.3, 1] }}
-          className="w-full h-full lg:w-[80%] lg:h-full relative translate-y-20 lg:translate-y-0"
+          className="w-full h-full lg:w-[80%] lg:h-full relative translate-y-28 md:translate-y-20 lg:translate-y-0"
         >
           <img
             src={brainImg}
             alt="Anatomical Brain Render"
-            className="w-full h-full object-contain object-right opacity-90"
+            className="w-full h-full object-contain object-center lg:object-right opacity-[0.12] sm:opacity-20 lg:opacity-90"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-background via-background/10 to-transparent z-10" />
           <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-transparent to-background/20 z-10" />
