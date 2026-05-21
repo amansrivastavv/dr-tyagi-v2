@@ -4,19 +4,19 @@ import brainImg from "@/assets/hero/brain_render.png";
 
 export default function HeroElite() {
   return (
-    <section className="relative min-h-screen w-full bg-background overflow-hidden flex flex-col justify-between pt-32">
+    <section className="relative min-h-screen w-full bg-background overflow-hidden flex flex-col justify-between pt-20 md:pt-32">
       {/* Background Brain Image */}
       <div className="absolute inset-0 z-0 flex items-center justify-end pointer-events-none">
         <motion.div
           initial={{ opacity: 0, scale: 1.05, x: 50 }}
           animate={{ opacity: 1, scale: 1, x: 0 }}
           transition={{ duration: 2.5, ease: [0.16, 1, 0.3, 1] }}
-          className="w-full h-full lg:w-[80%] lg:h-full relative translate-y-28 md:translate-y-20 lg:translate-y-0"
+          className="w-full h-[55%] md:h-full lg:w-[80%] lg:h-full relative translate-y-16 md:translate-y-20 lg:translate-y-0"
         >
           <img
             src={brainImg}
             alt="Anatomical Brain Render"
-            className="w-full h-full object-contain object-center lg:object-right opacity-[0.12] sm:opacity-20 lg:opacity-90"
+            className="w-full h-full object-contain object-bottom lg:object-right opacity-[0.06] sm:opacity-20 lg:opacity-90"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-background via-background/10 to-transparent z-10" />
           <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-transparent to-background/20 z-10" />
@@ -33,13 +33,13 @@ export default function HeroElite() {
 
       {/* Hero Content */}
       <div className="relative z-20 flex-grow flex items-center">
-        <div className="max-w-7xl mx-auto w-full px-8 pt-12 md:pt-0">
+        <div className="max-w-7xl mx-auto w-full px-6 md:px-8 pt-4 md:pt-0">
           <div className="max-w-3xl">
             <motion.h1
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1.2, delay: 0.8, ease: "easeOut" }}
-              className="text-foreground text-5xl md:text-6xl lg:text-7xl font-serif leading-[1.1] mb-10 tracking-tight"
+              className="text-foreground text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif leading-[1.1] mb-6 md:mb-10 tracking-tight"
             >
               When It’s Your <br />
               Brain Expertise <br /> Matters Most.
@@ -49,7 +49,7 @@ export default function HeroElite() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 0.8 }}
               transition={{ duration: 1.5, delay: 1.2 }}
-              className="text-slate-600 text-base md:text-lg font-light leading-relaxed mb-10 max-w-md tracking-wide"
+              className="text-slate-600 text-base md:text-lg font-light leading-relaxed mb-6 md:mb-10 max-w-md tracking-wide"
             >
               Advanced minimally invasive care for brain tumors, stroke, and complex neurovascular conditions—powered by global expertise and cutting-edge technologies like Zap-X radiosurgery for precise, non-invasive treatment.
             </motion.p>
@@ -68,7 +68,7 @@ export default function HeroElite() {
       </div>
 
       {/* Footer Strip */}
-      <div className="relative z-20 max-w-7xl mx-auto w-full px-8 pb-16 flex items-center justify-end">
+      <div className="relative z-20 max-w-7xl mx-auto w-full px-6 md:px-8 pb-6 md:pb-16 flex items-center justify-end">
         {/* Decorative corner element */}
         <div className="h-24 w-px bg-gradient-to-t from-foreground/10 to-transparent hidden lg:block" />
       </div>

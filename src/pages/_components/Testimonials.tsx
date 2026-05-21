@@ -2,27 +2,27 @@ import { motion } from "motion/react";
 import { Star, Quote } from "lucide-react";
 
 const testimonials = [
-  {
-    name: "Ramesh Sharma",
-    condition: "Brain Tumor (Meningioma)",
-    text: "Dr. Tyagi performed my surgery with incredible precision. I was back on my feet within 2 weeks. His patient-first approach gave our entire family immense confidence during a very difficult time.",
-    rating: 5,
-    location: "Delhi",
-  },
-  {
-    name: "Priya Mehta",
-    condition: "Cerebral Aneurysm",
-    text: "I had a complex aneurysm that other doctors said was inoperable. Dr. Tyagi not only operated successfully but explained every step in simple terms. He's a true expert and a wonderful human being.",
-    rating: 5,
-    location: "Mumbai",
-  },
-  {
-    name: "Arjun Kapoor",
-    condition: "Stroke Treatment",
-    text: "After my stroke, I thought my life was over. Dr. Tyagi's team provided exceptional care and his rehabilitation guidance changed everything. Today I'm living normally thanks to his expertise.",
-    rating: 5,
-    location: "Noida",
-  },
+ {
+  name: "Lorem Ipsum",
+  condition: "Lorem Ipsum Dolor",
+  text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  rating: 5,
+  location: "Lorem City",
+},
+{
+  name: "Lorem Ipsum",
+  condition: "Consectetur Adipiscing",
+  text: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+  rating: 5,
+  location: "Lorem Town",
+},
+{
+  name: "Lorem Ipsum",
+  condition: "Sed Eiusmod Tempor",
+  text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+  rating: 5,
+  location: "Ipsum Nagar",
+},
 ];
 
 export default function Testimonials() {
