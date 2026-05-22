@@ -4,7 +4,7 @@ import brainImg from "@/assets/hero/brain_render.png";
 
 export default function HeroElite() {
   return (
-    <section className="relative min-h-[70vh] sm:min-h-[85vh] w-full bg-background overflow-hidden flex flex-col justify-between pt-16 sm:pt-12 md:pt-32">
+    <section className="relative min-h-[70vh] sm:min-h-[85vh] w-full bg-background overflow-hidden flex flex-col justify-between pt-24 sm:pt-24 md:pt-32">
       {/* Background Brain Image */}
       <div className="absolute inset-0 z-0 flex items-center justify-end pointer-events-none">
         <motion.div
@@ -34,12 +34,12 @@ export default function HeroElite() {
       {/* Hero Content */}
       <div className="relative z-30 flex-grow flex items-center">
         <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 md:px-8 pt-4 md:pt-0">
-          <div className="max-w-3xl sm:max-w-2xl md:max-w-3xl">
+          <div className="max-w-[320px] sm:max-w-xl md:max-w-3xl">
             <motion.h1
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1.2, delay: 0.8, ease: "easeOut" }}
-              className="text-foreground text-5xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-serif leading-[1.05] sm:leading-[1.08] md:leading-[1.1] mb-4 sm:mb-6 md:mb-10 tracking-tight"
+              className="text-foreground text-[48px] sm:text-5xl md:text-6xl xl:text-7xl font-serif leading-[1.05] sm:leading-[1.08] md:leading-[1.1] mb-4 sm:mb-6 md:mb-10 tracking-tight"
             >
               When It’s Your <br />
               Brain Expertise <br /> Matters Most.
@@ -49,7 +49,7 @@ export default function HeroElite() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 0.8 }}
               transition={{ duration: 1.5, delay: 1.2 }}
-              className="text-slate-600 text-base md:text-lg font-light leading-relaxed mb-6 md:mb-10 max-w-md tracking-wide"
+              className="text-slate-600 text-[15px] sm:text-base md:text-lg leading-8 font-light mb-6 md:mb-10 max-w-[320px] sm:max-w-md tracking-wide"
             >
               Advanced minimally invasive care for brain tumors, stroke, and complex neurovascular conditions—powered by global expertise and cutting-edge technologies like Zap-X radiosurgery for precise, non-invasive treatment.
             </motion.p>
