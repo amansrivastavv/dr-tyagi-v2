@@ -39,7 +39,7 @@ export default function HeroElite() {
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1.2, delay: 0.8, ease: "easeOut" }}
-              className="text-foreground text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-serif leading-[1.05] sm:leading-[1.08] md:leading-[1.1] mb-4 sm:mb-6 md:mb-10 tracking-tight"
+              className="text-foreground text-5xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-serif leading-[1.05] sm:leading-[1.08] md:leading-[1.1] mb-4 sm:mb-6 md:mb-10 tracking-tight"
             >
               When It’s Your <br />
               Brain Expertise <br /> Matters Most.
