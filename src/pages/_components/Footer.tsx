@@ -1,4 +1,6 @@
 import { Brain, Phone, Mail, MapPin, ExternalLink } from "lucide-react";
+import logoImg from "@/assets/logo.png";
+
 
 const quickLinks = [
   { label: "Home", href: "#home" },
@@ -36,13 +38,13 @@ export default function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center shadow-lg shadow-primary/20">
-                <Brain className="w-5 h-5 text-background" />
-              </div>
+            <div className="flex items-center gap-3 mb-2">
               <div>
-                <p className="font-bold text-white tracking-tight">Dr. Gaurav Tyagi</p>
-                <p className="text-primary text-[10px] font-bold uppercase tracking-widest">Senior Neurosurgeon</p>
+                <img
+                  src={logoImg}
+                  alt="Dr. Gaurav Tyagi"
+                  className="h-18 w-auto object-contain mb-1  object-contain transition-all duration-300 brightness-0 invert"
+                />
               </div>
             </div>
             <p className="text-white/50 text-sm leading-relaxed mb-8 font-light">
